@@ -1,0 +1,21 @@
+:root {
+  --font-primary: "Brown LL";
+  
+  /* Colors */
+  --color-white: #FFF;
+  --color-neutral-inverse: #E6E7E9;
+  --color-primary: #161719;
+  --color-secondary: #7A7C81;
+  --color-neutral: #2C2D30;
+  --color-neutral-secondary: rgba(44, 45, 48, 0.08);
+  --color-icon-bg: rgba(224, 224, 224, 0.1);
+  --semantic-bg-neutral-secondary: rgba(44, 45, 48, 0.08);
+  --semantic-fg-disabled  : rgba(163, 166, 172, 0.10); /*#A3A6AC 48%;*/
+  
+  /* Dimensions */
+  --card-width: 342px;
+  --images-height: 200px;
+  --avatar-size: 80px;
+  --spacing-md: 24px;
+  --spacing-sm: 12px;
+} 
