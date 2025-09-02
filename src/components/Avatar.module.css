@@ -6,14 +6,11 @@
     gap: 8px;
 }
 
-.icon-wrapper,
-.image-wrapper,
-.initials-wrapper {
+.type-wrapper {
     background-color: var(--semantic-fg-disabled);
     border-radius: 50%;
     overflow: hidden;
 }
-
 
 .avatar--sm {
     width: 32px;
@@ -53,50 +50,49 @@
     color: var(--color-primary);
     background: var(--semantic-bg-neutral-inverse, #E6E7E9);
     text-align: center;
-
 }
 
 .avatar__icon {
     fill: var(--semantic-bg-neutral-secondary, rgba(44, 45, 48, 0.08));
 }
 
+/* Size-specific styles for initials */
 .avatar--sm .avatar__initials {
     padding: 8px 10px;
-    font-family: "Brown LL";
+    font-family: var(--font-primary);
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: 16px;
     letter-spacing: -0.25px;
-
 }
 
 .avatar--md .avatar__initials {
     padding: 10px 12.5px;
-    font-family: "Brown LL";
+    font-family: var(--font-primary);
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
     letter-spacing: -0.5px;
-
 }
 
 .avatar--lg .avatar__initials {
     padding: 20px 25px 20px 24px;
-    font-family: "Brown LL";
+    font-family: var(--font-primary);
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
     line-height: 40px;
     letter-spacing: -1px;
-
 }
 
 .avatar--xl .avatar__initials {
     font-size: 45px;
     padding: 35px 11px 35px 12px;
+    font-family: var(--font-primary);
     font-style: normal;
     font-weight: 700;
     letter-spacing: -1px;
 }
+  
