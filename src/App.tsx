@@ -1,47 +1,32 @@
-import { Avatar } from './components/Avatar'
+// import { useState } from 'react'
+import './App.css'
+import CreatorCard from './components/CreatorCard'
 
 function App() {
+  const handleDetailsClick = () => {
+    console.log('Details button clicked!');
+  };
 
   return (
-    <div style={{ display: 'flex', gap: '50px', alignItems: 'center' }}>
-      <Avatar 
-        type="icon"
-        size="sm"
-      />
-      <Avatar 
-        type="icon"
-        size="md"
-      />
-      <Avatar 
-        type="icon"
-        size="lg"
-      />
-      <Avatar 
-        type="icon"
-        size="xl"
-      />
-
-      <Avatar 
-        type="initials"
-        initials="AJ"
-        size="sm"
-      />
-      <Avatar 
-        type="initials"
-        initials="AJ"
-        size="md"
-      />
-      <Avatar 
-        type="initials"
-        initials="AJ"
-        size="lg"
-      />
-      <Avatar 
-        type="initials"
-        initials="BAjhdhY"
-        size="xl"
-      />
-    </div>
+    <>
+      <h1>User Profile Cards</h1>
+      <div style={{ display: 'flex', gap: '20px' }}>
+        <CreatorCard
+          name="Emily Johnson"
+          age={34}
+          location="Chicago IL"
+          email="email@x.dummyjson.com"
+          onDetailsClick={handleDetailsClick}
+        />
+        <CreatorCard
+          name="Emily Johnson"
+          age={34}
+          location="Chicago IL"
+          email="email@x.dummyjson.com"
+          onDetailsClick={handleDetailsClick}
+        />
+      </div>
+    </>
   )
 }
 
