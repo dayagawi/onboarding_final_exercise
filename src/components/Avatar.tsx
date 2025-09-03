@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './Avatar.module.css';
-import Logo from "./logo.svg?react";
-import ImageContainer from './ImageContainer';
-import TextContainer from './TextContainer';
+import Icon from "./icon.svg?react";
+import { ImageContainer } from './ImageContainer';
+import { TextContainer } from './TextContainer';
 
 // Separate interfaces for each avatar type
 type ImageAvatar = {
@@ -19,31 +19,29 @@ type IconAvatar = {
   type: 'icon';
 }
 
-type AvatarContent = ImageAvatar | InitialsAvatar | IconAvatar;
-
-export interface AvatarProps {
-  content: AvatarContent;
-  size?: 'sm' | 'md' | 'lg' | 'xl'; // 32x32, 40x40, 80x80, 136x136
+type AvatarProps = (ImageAvatar | InitialsAvatar | IconAvatar) & {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
   className?: string;
-}
+};
 
-export const Avatar: React.FC<AvatarProps> = ({
-  content,
-  size = 'md',
-  className = ''
-}) => {
+export const Avatar: React.FC<AvatarProps> = (props) => {
+  const { type, size = 'md', className = '' } = props;
     
-  // Validation for initials length (only when type is 'initials')
-  if (content.type === 'initials' && content.initials.length !== 2) {
-    console.error('Avatar: initials must be exactly 2 characters long');
-  }
+  // Get and trim initials (2 chars max) if they exist
+  const getInitials = () => {
+    if (type === 'initials' && 'initials' in props) {
+      const initials = props.initials;
+      return initials.length > 2 ? initials.substring(0, 2) : initials;
+    }
+    return '';
+  };
 
   const renderContent = () => {
-    switch (content.type) {
+    switch (type) {
         case 'image':
          return (
            <ImageContainer 
-             src={content.src} 
+             src={'src' in props ? props.src : ''} 
              alt="User avatar" 
              className={styles['avatar__image']}
            />
@@ -52,7 +50,7 @@ export const Avatar: React.FC<AvatarProps> = ({
       case 'initials':
         return (
           <TextContainer 
-            text={content.initials}
+            text={getInitials()}
             className={styles['avatar__initials']}
             transform="uppercase"
           />
@@ -60,7 +58,7 @@ export const Avatar: React.FC<AvatarProps> = ({
       
       case 'icon':
         return (
-          <Logo
+          <Icon
             className={styles['avatar__icon']}
           />
         );

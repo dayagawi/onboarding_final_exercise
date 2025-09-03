@@ -1,4 +1,5 @@
 import React from 'react';
+import './TextContainer.css';
 
 interface TextContainerProps {
   text: string;
@@ -11,23 +12,23 @@ export const TextContainer: React.FC<TextContainerProps> = ({
   className,
   transform = 'none'
 }) => {
-  const getTransformedText = () => {
+  const getTransformClass = () => {
     switch (transform) {
       case 'uppercase':
-        return text.toUpperCase();
+        return 'text-transform-uppercase';
       case 'lowercase':
-        return text.toLowerCase();
+        return 'text-transform-lowercase';
       case 'capitalize':
-        return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+        return 'text-transform-capitalize';
       case 'none':
       default:
-        return text;
+        return 'text-transform-none';
     }
   };
 
   return (
-    <div className={className}>
-      {getTransformedText()}
+    <div className={`${className} ${getTransformClass()}`.trim()}>
+      {text}
     </div>
   );
 };
