@@ -1,6 +1,6 @@
 // import { useState } from 'react'
-import './App.css'
-import CreatorCard from './components/CreatorCard'
+// import './App.css'
+import { CreatorCard } from './components/CreatorCard'
 
 function App() {
   const handleDetailsClick = () => {

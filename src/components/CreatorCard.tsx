@@ -1,7 +1,6 @@
 import React from 'react';
-import './CreatorCard.css';
-import Button from './Button';
-import Avatar from './Avatar';
+import styles from './CreatorCard.module.css';
+import { Avatar } from './Avatar';
 
 interface CreatorCardProps {
   name: string;
@@ -11,7 +10,7 @@ interface CreatorCardProps {
   onDetailsClick?: () => void;
 }
 
-const CreatorCard: React.FC<CreatorCardProps> = ({
+export const CreatorCard: React.FC<CreatorCardProps> = ({
   name,
   age,
   location,
@@ -19,39 +18,34 @@ const CreatorCard: React.FC<CreatorCardProps> = ({
   onDetailsClick
 }) => {
   return (
-    <div className="creator-card">
+    <div className={styles['creator-card']}>
     
       {/* Images */}
-      <div className="images">
-        <div className="frame"> </div>
-        <div className="frame"> </div>
-        <div className="frame"> </div>
+      <div className={styles.images}>
+        <div className={styles.frame}> </div>
+        <div className={styles.frame}> </div>
+        <div className={styles.frame}> </div>
         
-        {/* Avatar picture placeholder */}
+        {/* Avatar placeholder */}
         <Avatar 
           type="icon"
-          size="md"
-          position="absolute"
-          absolutePosition={{ left: '131px', bottom: '-56px' }}
+          size="lg"
+          className={styles['creator-card-avatar']}
         />
         </div>
       
       {/* User information */}
-      <div className="user-info-container">
-        <div className="user-name-and-details">
-          <h2 className="user-name">{name}</h2>
-          <p className="user-details">{age} | {location}</p>
+      <div className={styles['user-info-container']}>
+        <div className={styles['user-name-and-details']}>
+          <h2 className={styles['user-name']}>{name}</h2>
+          <p className={styles['user-details']}>{age} | {location}</p>
         </div>
-        <p className="user-email">{email}</p>
+        <p className={styles['user-email']}>{email}</p>
         
       {/* Details button */}
-      <Button 
-        variant="neutral" 
-        size="md" 
-        onClick={onDetailsClick}
-      >
+      <button className={styles['details-button']} onClick={onDetailsClick}>
         Details
-      </Button>
+      </button>
       
       </div>
     </div>

@@ -95,4 +95,9 @@
     font-weight: 700;
     letter-spacing: -1px;
 }
-  
+
+.creatorCardavatar {
+    position: absolute;
+    left: 131px;
+    bottom: -56px;
+}
