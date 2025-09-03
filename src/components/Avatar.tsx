@@ -29,7 +29,7 @@ export const Avatar: React.FC<AvatarProps> = (props) => {
     
   // Get and trim initials (2 chars max) if they exist
   const getInitials = () => {
-    if (type === 'initials' && 'initials' in props) {
+    if (type === 'initials') {
       const initials = props.initials;
       return initials.length > 2 ? initials.substring(0, 2) : initials;
     }
@@ -41,7 +41,7 @@ export const Avatar: React.FC<AvatarProps> = (props) => {
         case 'image':
          return (
            <ImageContainer 
-             src={'src' in props ? props.src : ''} 
+             src={props.src}
              alt="User avatar" 
              className={styles['avatar__image']}
            />
