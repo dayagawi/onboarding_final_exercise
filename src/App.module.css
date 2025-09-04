@@ -1,0 +1,6 @@
+@import './styles/variables.css';
+
+.cards-container {
+  display: flex;
+  gap: 20px;
+}

@@ -9,8 +9,13 @@
   --color-neutral: #2C2D30;
   --color-neutral-secondary: rgba(44, 45, 48, 0.08);
   --color-icon-bg: rgba(224, 224, 224, 0.1);
+  --semantic-bg-secondary: #FFF;
+  --semantic-bg-white: #FFF;
+  --semantic-bg-neutral-inverse: #E6E7E9;
   --semantic-bg-neutral-secondary: rgba(44, 45, 48, 0.08);
   --semantic-fg-disabled  : rgba(163, 166, 172, 0.10); /*#A3A6AC 48%;*/
+  --semantic-fg-primary: #161719;
+  --semantic-fg-secondary: #7A7C81;
   
   /* Card Dimensions */
   --card-width: 342px;
@@ -18,10 +23,8 @@
   --card-min-width: 296px;
   --card-images-height: 200px;
   --card-frame-width: 114px;
-  --card-content-width: 294px;
-  --card-content-height: 40px;
   --card-avatar-size: 80px;
-  --card-avatar-offset-x: 131px;
+  --card-avatar-offset-x: calc(50% - var(--card-avatar-size) / 2);
   --card-avatar-offset-y: -56px;
   
   /* Spacing */
@@ -47,4 +50,9 @@
   
   /* Border Radius */
   --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-pill: 999px;
+  
+  /* Shadows */
+  --shadow-elevation-1: 0 4px 12px -2px rgba(24, 39, 75, 0.08), 0 0 4px 0 rgba(24, 39, 75, 0.02);
 } 

@@ -32,7 +32,7 @@ export const CreatorCard: React.FC<CreatorCardProps> = ({
           size="lg"
           className={styles['creator-card-avatar']}
         />
-        </div>
+      </div>
       
       {/* User information */}
       <div className={styles['user-info-container']}>
@@ -42,10 +42,10 @@ export const CreatorCard: React.FC<CreatorCardProps> = ({
         </div>
         <p className={styles['user-email']}>{email}</p>
         
-      {/* Details button */}
-      <button className={styles['details-button']} onClick={onDetailsClick}>
-        Details
-      </button>
+        {/* Details button */}
+        <button className={styles['details-button']} onClick={onDetailsClick}>
+          Details
+        </button>
       
       </div>
     </div>
