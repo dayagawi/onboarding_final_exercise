@@ -1,0 +1,47 @@
+@import '../styles/variables.css';
+
+.search-bar {
+  display: flex;
+  width: var(--search-bar-width);
+  max-width: var(--search-bar-max-width);
+  height: var(--search-bar-height);
+  align-items: center;
+  border-radius: var(--search-bar-border-radius);
+  background: var(--semantic-light-background-bg-alpha);
+}
+
+.search-input-container {
+  display: flex;
+  padding: 10px 12px;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+}
+
+.icon {
+  width: var(--search-icon-size);
+  height: var(--search-icon-size);
+  fill: var(--semantic-dark-foreground-fg-secondary);
+  flex-shrink: 0;
+}
+
+.input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-family: var(--font-primary);
+  height: var(--search-input-height);
+  gap: 2px;
+  color: var(--search-input-color);
+  font-size: var(--font-size-base);
+  font-style: normal;
+  font-weight: var(--search-input-font-weight);
+  line-height: var(--search-input-line-height);
+  letter-spacing: var(--letter-spacing-normal);
+  caret-color: var(--search-input-caret-color);
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--search-input-placeholder-color);
+}
