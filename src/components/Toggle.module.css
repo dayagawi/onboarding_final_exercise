@@ -1,0 +1,45 @@
+@import '../styles/variables.css';
+
+.toggle-container {
+  display: flex;
+  width: var(--toggle-container-width);
+  height: var(--toggle-container-height);
+  padding: var(--toggle-container-padding);
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: var(--toggle-container-border-radius);
+  border: 1px solid var(--color-neutral-inverse);
+  background: var(--color-white);
+}
+
+.toggle-option-container {
+    display: flex;
+    width: var(--toggle-option-container-size);
+    height: var(--toggle-option-container-size);   
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.toggle-option {
+    display: flex;
+    width: var(--toggle-option-size);
+    height: var(--toggle-option-size);
+    padding: var(--toggle-option-padding);
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.toggle-option.selected {
+    width: var(--toggle-option-selected-size);
+    height: var(--toggle-option-selected-size);
+    flex-shrink: 0;
+    border-radius: var(--toggle-option-selected-border-radius);
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background: var(--semantic-bg-tertiary);
+}

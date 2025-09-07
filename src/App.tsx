@@ -1,10 +1,14 @@
 import { useState } from 'react';
-import { Avatar } from './components/Avatar'
-import { SearchBar } from './components/SearchBar'
 import styles from './App.module.css'
+import { Avatar } from './components/Avatar'
+import { Toggle, type ToggleViewType } from './components/Toggle'
+import { SearchBar } from './components/SearchBar'
 import { CreatorCard } from './components/CreatorCard'
+import ListIcon from './components/Icons/list-icon.svg?react'
+import GridIcon from './components/Icons/grid-icon.svg?react'
 
 function App() {
+  const [toggleValue, setToggleValue] = useState<ToggleViewType>('list');
   const [searchTerm, setSearchTerm] = useState("");
   const handleDetailsClick = () => {
     console.log('Details button clicked!');
@@ -17,7 +21,19 @@ function App() {
         value={searchTerm}
         onChange={setSearchTerm}
       />
-      
+      <Toggle
+        leftOption={{
+          value: 'grid',
+          icon: <GridIcon />
+        }}
+        rightOption={{
+          value: 'list',
+          icon: <ListIcon />
+        }}
+        selectedValue={toggleValue}
+        onChange={setToggleValue}
+	  />
+
       <div className={styles['avatars-container']}>
         <Avatar 
           type="icon"
@@ -35,6 +51,7 @@ function App() {
           type="icon"
           size="xl"
         />
+
         <Avatar 
           type="initials"
           initials="AJ"
