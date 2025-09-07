@@ -1,0 +1,14 @@
+@import './styles/variables.css';
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+
+.avatars-container {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
