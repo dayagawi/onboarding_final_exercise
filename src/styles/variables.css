@@ -10,7 +10,19 @@
   --color-neutral-secondary: rgba(44, 45, 48, 0.08);
   --color-icon-bg: rgba(224, 224, 224, 0.1);
   --semantic-bg-neutral-secondary: rgba(44, 45, 48, 0.08);
+  --semantic-bg-tertiary: #F3F4F6;
   --semantic-fg-disabled  : rgba(163, 166, 172, 0.10); /*#A3A6AC 48%;*/
+  
+  /* Toggle Variables */
+  --toggle-container-width: 50px;
+  --toggle-container-height: 24px;
+  --toggle-container-padding: 4px;
+  --toggle-container-border-radius: 999px;
+  --toggle-option-container-size: 24px;
+  --toggle-option-size: 14px;
+  --toggle-option-padding: 5px;
+  --toggle-option-selected-size: 24px;
+  --toggle-option-selected-border-radius: 100px;
   
   /* Dimensions */
   --card-width: 342px;
