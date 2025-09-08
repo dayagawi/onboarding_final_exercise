@@ -12,3 +12,8 @@
   gap: 50px;
   align-items: center;
 }
+
+.cards-container {
+  display: flex;
+  gap: 20px;
+}
