@@ -23,42 +23,41 @@ function App() {
           type="icon"
           size="sm"
         />
-      <Avatar 
-        type="icon"
-        size="md"
-      />
-      <Avatar 
-        type="icon"
-        size="lg"
-      />
-      <Avatar 
-        type="icon"
-        size="xl"
-      />
-
-      <Avatar 
-        type="initials"
-        initials="AJ"
-        size="sm"
-      />
-      <Avatar 
-        type="initials"
-        initials="AJ"
-        size="md"
-      />
-      <Avatar 
-        type="initials"
-        initials="AJ"
-        size="lg"
-      />
-             <Avatar 
+        <Avatar 
+          type="icon"
+          size="md"
+        />
+        <Avatar 
+          type="icon"
+          size="lg"
+        />
+        <Avatar 
+          type="icon"
+          size="xl"
+        />
+        <Avatar 
+          type="initials"
+          initials="AJ"
+          size="sm"
+        />
+        <Avatar 
+          type="initials"
+          initials="AJ"
+          size="md"
+        />
+        <Avatar 
+          type="initials"
+          initials="AJ"
+          size="lg"
+         />
+        <Avatar 
          type="initials"
          initials="BAjhdhY"
          size="xl"
-       />
+        />
       </div>
       
-        <div className={styles['cards-container']}>
+      <div className={styles['cards-container']}>
         <CreatorCard
           name="Emiliana Castillo Johnson Smith Kumar"
           age={34}
@@ -89,5 +88,6 @@ function App() {
         />
       </div>
     </div>
-    
+  )
+}
 export default App
