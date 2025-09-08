@@ -2,12 +2,13 @@ import React from 'react';
 import styles from './SearchBar.module.css';
 import SearchIcon from './Icons/search_icon.svg?react';
 
-interface SearchBarProps {
+type SearchBarProps = {
   placeholder?: string;
-  value?: string;
-  onChange?: (value: string) => void;
   className?: string;
-}
+} & (
+  | { value: string; onChange: (value: string) => void }
+  | { value?: undefined; onChange?: undefined }
+)
 
 export const SearchBar: React.FC<SearchBarProps> = ({
   placeholder = "Placeholder",
