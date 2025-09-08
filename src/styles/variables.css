@@ -31,6 +31,17 @@
   --toggle-option-selected-size: 24px;
   --toggle-option-selected-border-radius: 100px;
   
+  /* Toggle Variables */
+  --toggle-container-width: 50px;
+  --toggle-container-height: 24px;
+  --toggle-container-padding: 4px;
+  --toggle-container-border-radius: 999px;
+  --toggle-option-container-size: 24px;
+  --toggle-option-size: 14px;
+  --toggle-option-padding: 5px;
+  --toggle-option-selected-size: 24px;
+  --toggle-option-selected-border-radius: 100px;
+  
   /* Dimensions */
   /* Search Bar Variables */
   --search-bar-width: 400px;
