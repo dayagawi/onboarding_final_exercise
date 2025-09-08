@@ -1,14 +1,62 @@
-import { CreatorCard } from './components/CreatorCard'
+import { useState } from 'react';
+import { Avatar } from './components/Avatar'
+import { SearchBar } from './components/SearchBar'
 import styles from './App.module.css'
+import { CreatorCard } from './components/CreatorCard'
 
 function App() {
+  const [searchTerm, setSearchTerm] = useState("");
   const handleDetailsClick = () => {
     console.log('Details button clicked!');
   };
 
   return (
-    <>
-      <h1>User Profile Cards</h1>
+    <div className={styles['app-container']}>
+      <SearchBar 
+        placeholder="Search users..." 
+        value={searchTerm}
+        onChange={setSearchTerm}
+      />
+      
+      <div className={styles['avatars-container']}>
+        <Avatar 
+          type="icon"
+          size="sm"
+        />
+        <Avatar 
+          type="icon"
+          size="md"
+        />
+        <Avatar 
+          type="icon"
+          size="lg"
+        />
+        <Avatar 
+          type="icon"
+          size="xl"
+        />
+        <Avatar 
+          type="initials"
+          initials="AJ"
+          size="sm"
+        />
+        <Avatar 
+          type="initials"
+          initials="AJ"
+          size="md"
+        />
+        <Avatar 
+          type="initials"
+          initials="AJ"
+          size="lg"
+         />
+        <Avatar 
+         type="initials"
+         initials="BAjhdhY"
+         size="xl"
+        />
+      </div>
+      
       <div className={styles['cards-container']}>
         <CreatorCard
           name="Emiliana Castillo Johnson Smith Kumar"
@@ -39,8 +87,7 @@ function App() {
           onDetailsClick={handleDetailsClick}
         />
       </div>
-    </>
+    </div>
   )
 }
-
 export default App

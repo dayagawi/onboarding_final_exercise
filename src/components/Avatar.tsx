@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Avatar.module.css';
-import Icon from "./icon.svg?react";
+import Icon from "./Icons/avatar_icon.svg?react";
 import { ImageContainer } from './ImageContainer';
 import { TextContainer } from './TextContainer';
 

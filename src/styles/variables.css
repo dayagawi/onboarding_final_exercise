@@ -14,6 +14,24 @@
   --semantic-bg-neutral-inverse: #E6E7E9;
   --semantic-bg-neutral-secondary: rgba(44, 45, 48, 0.08);
   --semantic-fg-disabled  : rgba(163, 166, 172, 0.10); /*#A3A6AC 48%;*/
+
+  --semantic-dark-foreground-fg-secondary: #A3A6AC;
+  --semantic-fg-tertiary: #D0D1D3;
+  --semantic-light-background-bg-alpha: rgba(0, 0, 0, 0.04);
+  
+  /* Search Bar Variables */
+  --search-bar-width: 400px;
+  --search-bar-max-width: 476px;
+  --search-bar-height: 40px;
+  --search-bar-border-radius: 20px;
+  --search-icon-size: 16px;
+  --search-input-height: 20px;
+  --search-input-color: #161719;
+  --search-input-font-weight: 400;
+  --search-input-line-height: 18px;
+  --search-input-caret-color: #2B9BF0;
+  --search-input-placeholder-color: #D0D1D3;
+
   --semantic-fg-primary: #161719;
   --semantic-fg-secondary: #7A7C81;
   
@@ -26,6 +44,9 @@
   --card-avatar-size: 80px;
   --card-avatar-offset-x: calc(50% - var(--card-avatar-size) / 2);
   --card-avatar-offset-y: -56px;
+
+  --letter-spacing-normal: -0.25px;
+  --font-size-base:14px;
   
   /* Spacing */
   --spacing-sm: 12px;
@@ -55,4 +76,5 @@
   
   /* Shadows */
   --shadow-elevation-1: 0 4px 12px -2px rgba(24, 39, 75, 0.08), 0 0 4px 0 rgba(24, 39, 75, 0.02);
+
 } 
