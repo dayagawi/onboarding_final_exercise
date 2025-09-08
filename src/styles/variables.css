@@ -13,12 +13,36 @@
   --semantic-bg-white: #FFF;
   --semantic-bg-neutral-inverse: #E6E7E9;
   --semantic-bg-neutral-secondary: rgba(44, 45, 48, 0.08);
+  --semantic-bg-tertiary: #F3F4F6;
   --semantic-fg-disabled  : rgba(163, 166, 172, 0.10); /*#A3A6AC 48%;*/
 
   --semantic-dark-foreground-fg-secondary: #A3A6AC;
   --semantic-fg-tertiary: #D0D1D3;
   --semantic-light-background-bg-alpha: rgba(0, 0, 0, 0.04);
   
+  /* Toggle Variables */
+  --toggle-container-width: 50px;
+  --toggle-container-height: 24px;
+  --toggle-container-padding: 4px;
+  --toggle-container-border-radius: 999px;
+  --toggle-option-container-size: 24px;
+  --toggle-option-size: 14px;
+  --toggle-option-padding: 5px;
+  --toggle-option-selected-size: 24px;
+  --toggle-option-selected-border-radius: 100px;
+  
+  /* Toggle Variables */
+  --toggle-container-width: 50px;
+  --toggle-container-height: 24px;
+  --toggle-container-padding: 4px;
+  --toggle-container-border-radius: 999px;
+  --toggle-option-container-size: 24px;
+  --toggle-option-size: 14px;
+  --toggle-option-padding: 5px;
+  --toggle-option-selected-size: 24px;
+  --toggle-option-selected-border-radius: 100px;
+  
+  /* Dimensions */
   /* Search Bar Variables */
   --search-bar-width: 400px;
   --search-bar-max-width: 476px;
