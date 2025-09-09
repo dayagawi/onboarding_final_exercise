@@ -1,108 +1,26 @@
-import { useState } from 'react';
 import styles from './App.module.css'
 import { Avatar } from './components/Avatar'
-import { Toggle, type ToggleViewType } from './components/Toggle'
-import { SearchBar } from './components/SearchBar'
-import { CreatorCard } from './components/CreatorCard'
-import ListIcon from './components/Icons/list-icon.svg?react'
-import GridIcon from './components/Icons/grid-icon.svg?react'
+import { SearchPage } from './components/SearchPage'
+import LightricksLogo from './components/Icons/lightricks_logo.svg?react';
+
 
 function App() {
-  const [toggleValue, setToggleValue] = useState<ToggleViewType>('list');
-  const [searchTerm, setSearchTerm] = useState("");
-  const handleDetailsClick = () => {
-    console.log('Details button clicked!');
-  };
-
   return (
     <div className={styles['app-container']}>
-      <SearchBar 
-        placeholder="Search users..." 
-        value={searchTerm}
-        onChange={setSearchTerm}
-      />
-      <Toggle
-        leftOption={{
-          value: 'grid',
-          icon: <GridIcon />
-        }}
-        rightOption={{
-          value: 'list',
-          icon: <ListIcon />
-        }}
-        selectedValue={toggleValue}
-        onChange={setToggleValue}
-	  />
-
-      <div className={styles['avatars-container']}>
-        <Avatar 
-          type="icon"
-          size="sm"
-        />
-        <Avatar 
-          type="icon"
-          size="md"
-        />
-        <Avatar 
-          type="icon"
-          size="lg"
-        />
-        <Avatar 
-          type="icon"
-          size="xl"
-        />
-
-        <Avatar 
-          type="initials"
-          initials="AJ"
-          size="sm"
-        />
-        <Avatar 
-          type="initials"
-          initials="AJ"
-          size="md"
-        />
-        <Avatar 
-          type="initials"
-          initials="AJ"
-          size="lg"
-         />
-        <Avatar 
-         type="initials"
-         initials="BAjhdhY"
-         size="xl"
-        />
-      </div>
-      
-      <div className={styles['cards-container']}>
-        <CreatorCard
-          name="Emiliana Castillo Johnson Smith Kumar"
-          age={34}
-          location="Chicago IL"
-          email="emiliana.castillo@email.com"
-          onDetailsClick={handleDetailsClick}
-        />
-        <CreatorCard
-          name="Marryanna Johanson"
-          age={34}
-          location="Miami, FL"
-          email="email@x.dummyjson.com"
-          onDetailsClick={handleDetailsClick}
-        />
-        <CreatorCard
-          name="Yoisel Gonzalez"
-          age={67}
-          location="New York"
-          email="emailemailemailemail@x.dummyjson.com"
-          onDetailsClick={handleDetailsClick}
-        />
-        <CreatorCard
-          name="Benjamin Smith"
-          age={100}
-          location="very long location name that should be truncated at the end"
-          email="emailemailemailemail@x.dummyjson.com"
-          onDetailsClick={handleDetailsClick}
-        />
+      <div className={styles['home-page']}>
+        <header className={styles['header']}>
+          <div className={styles['logo-container']}>
+            <LightricksLogo className={styles['logo']} />
+          </div>
+          <Avatar
+            type="initials"
+            initials="TJ"
+            size="md"
+          />
+        </header>
+        <main className={styles['main-content']}>
+          <SearchPage />
+        </main>
       </div>
     </div>
   )
