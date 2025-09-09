@@ -9,6 +9,45 @@
   --color-neutral: #2C2D30;
   --color-neutral-secondary: rgba(44, 45, 48, 0.08);
   --color-icon-bg: rgba(224, 224, 224, 0.1);
+
+  
+  /* Button Variables */
+  --button-sm-height: 32px;
+  --button-sm-padding-horizontal: 16px;
+  --button-sm-font-size: 12px;
+  --button-sm-gap: 4px;
+  
+  --button-md-height: 40px;
+  --button-md-padding-horizontal: 20px;
+  --button-md-font-size: 14px;
+  --button-md-gap: 6px;
+  
+  --button-lg-height: 48px;
+  --button-lg-padding-horizontal: 24px;
+  --button-lg-font-size: 16px;
+  --button-lg-gap: 8px;
+  
+  --button-border-radius: 999px;
+  --button-font-weight: 500;
+  --button-letter-spacing: -0.5px;
+  
+  --button-hover-opacity: 0.9;
+  --button-disabled-opacity: 0.5;
+  --button-active-transform: translateY(1px);
+  
+  --button-neutral-hover-bg: #e0e0e0;
+  --button-neutral-active-bg: #d0d0d0;
+  
+  --button-details-max-width: 272px;
+  
+  /* Dimensions */
+  --card-width: 342px;
+  --images-height: 200px;
+  --avatar-size: 80px;
+  --spacing-md: 24px;
+  --spacing-sm: 12px;
+
+  --semantic-border-neutral: #E1E5E9;
   --semantic-bg-secondary: #FFF;
   --semantic-bg-white: #FFF;
   --semantic-bg-neutral-inverse: #E6E7E9;
