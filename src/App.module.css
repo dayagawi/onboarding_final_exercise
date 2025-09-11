@@ -3,17 +3,40 @@
 .app-container {
   display: flex;
   flex-direction: column;
-  gap: 50px;
   align-items: center;
 }
 
-.avatars-container {
+.home-page {
+  font-family: var(--font-primary);
+  width: 100vw;
   display: flex;
-  gap: 50px;
+  flex-direction: column;
+  background: var(--semantic-bg-primary);
+  margin: 0;
+}
+
+.main-content {
+  align-self: stretch;
+  padding: var(--spacing-md) 40px 0 40px;
+  flex: 1 0 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm) 16px var(--spacing-sm) var(--spacing-md);
+  border-bottom: 1px solid var(--semantic-bg-neutral-inverse);
+  background: var(--semantic-bg-secondary);
+}
+
+.logo-container {
+  display: flex;
   align-items: center;
 }
 
-.cards-container {
-  display: flex;
-  gap: 20px;
+.logo {
+  width: 105px;
+  height: 24px;
+  color: var(--semantic-fg-logo);
 }

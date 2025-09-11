@@ -1,6 +1,21 @@
 :root {
   --font-primary: "Brown LL", "Brown";
-  
+
+  /* Typography - Font Sizes */
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+
+  /* Typography - Line Heights */
+  --line-height-sm: 16px;
+  --line-height-md: 20px;
+  --line-height-lg: 24px;
+
+  /* Typography - Letter Spacing */
+  --letter-spacing-normal: -0.25px;
+  --letter-spacing-tight: -0.5px;
+
   /* Colors */
   --color-white: #FFF;
   --color-neutral-inverse: #E6E7E9;
@@ -10,55 +25,54 @@
   --color-neutral-secondary: rgba(44, 45, 48, 0.08);
   --color-icon-bg: rgba(224, 224, 224, 0.1);
 
-  
-  /* Button Variables */
-  --button-sm-height: 32px;
-  --button-sm-padding-horizontal: 16px;
-  --button-sm-font-size: 12px;
-  --button-sm-gap: 4px;
-  
-  --button-md-height: 40px;
-  --button-md-padding-horizontal: 20px;
-  --button-md-font-size: 14px;
-  --button-md-gap: 6px;
-  
-  --button-lg-height: 48px;
-  --button-lg-padding-horizontal: 24px;
-  --button-lg-font-size: 16px;
-  --button-lg-gap: 8px;
-  
-  --button-border-radius: 999px;
-  --button-font-weight: 500;
-  --button-letter-spacing: -0.5px;
-  
-  --button-hover-opacity: 0.9;
-  --button-disabled-opacity: 0.5;
-  --button-active-transform: translateY(1px);
-  
-  --button-neutral-hover-bg: #e0e0e0;
-  --button-neutral-active-bg: #d0d0d0;
-  
-  --button-details-max-width: 272px;
-  
-  /* Dimensions */
-  --card-width: 342px;
-  --images-height: 200px;
-  --avatar-size: 80px;
-  --spacing-md: 24px;
-  --spacing-sm: 12px;
-
   --semantic-border-neutral: #E1E5E9;
+  --semantic-bg-primary: #FCFCFD;
   --semantic-bg-secondary: #FFF;
   --semantic-bg-white: #FFF;
   --semantic-bg-neutral-inverse: #E6E7E9;
   --semantic-bg-neutral-secondary: rgba(44, 45, 48, 0.08);
   --semantic-bg-tertiary: #F3F4F6;
-  --semantic-fg-disabled  : rgba(163, 166, 172, 0.10); /*#A3A6AC 48%;*/
 
   --semantic-dark-foreground-fg-secondary: #A3A6AC;
   --semantic-fg-tertiary: #D0D1D3;
   --semantic-light-background-bg-alpha: rgba(0, 0, 0, 0.04);
-  
+
+  --semantic-fg-primary: #161719;
+  --semantic-fg-secondary: #7A7C81;
+  --semantic-fg-logo: #0C0E19;
+  --semantic-fg-inverse-secondary: #A3A6AC;
+  --semantic-fg-disabled: rgba(163, 166, 172, 0.10);
+
+  /* Button Variables */
+  --button-sm-height: 32px;
+  --button-sm-padding-horizontal: 12px;
+  --button-sm-font-size: 14px;
+  --button-sm-gap: 4px;
+
+  --button-md-height: 40px;
+  --button-md-padding-horizontal: 20px;
+  --button-md-font-size: 14px;
+  --button-md-gap: 6px;
+
+  --button-lg-height: 48px;
+  --button-lg-padding-horizontal: 24px;
+  --button-lg-font-size: 16px;
+  --button-lg-gap: 8px;
+
+  --button-border-radius: 999px;
+  --button-font-weight: 500;
+  --button-letter-spacing: -0.5px;
+
+  --button-hover-opacity: 0.9;
+  --button-disabled-opacity: 0.5;
+  --button-active-transform: translateY(1px);
+
+  --button-neutral-hover-bg: #e0e0e0;
+  --button-neutral-active-bg: #d0d0d0;
+
+  --button-details-max-width: 272px;
+
+
   /* Toggle Variables */
   --toggle-container-width: 50px;
   --toggle-container-height: 24px;
@@ -69,19 +83,7 @@
   --toggle-option-padding: 5px;
   --toggle-option-selected-size: 24px;
   --toggle-option-selected-border-radius: 100px;
-  
-  /* Toggle Variables */
-  --toggle-container-width: 50px;
-  --toggle-container-height: 24px;
-  --toggle-container-padding: 4px;
-  --toggle-container-border-radius: 999px;
-  --toggle-option-container-size: 24px;
-  --toggle-option-size: 14px;
-  --toggle-option-padding: 5px;
-  --toggle-option-selected-size: 24px;
-  --toggle-option-selected-border-radius: 100px;
-  
-  /* Dimensions */
+
   /* Search Bar Variables */
   --search-bar-width: 400px;
   --search-bar-max-width: 476px;
@@ -95,9 +97,6 @@
   --search-input-caret-color: #2B9BF0;
   --search-input-placeholder-color: #D0D1D3;
 
-  --semantic-fg-primary: #161719;
-  --semantic-fg-secondary: #7A7C81;
-  
   /* Card Dimensions */
   --card-width: 342px;
   --card-height: 416px;
@@ -108,36 +107,18 @@
   --card-avatar-offset-x: calc(50% - var(--card-avatar-size) / 2);
   --card-avatar-offset-y: -56px;
 
-  --letter-spacing-normal: -0.25px;
-  --font-size-base:14px;
-  
   /* Spacing */
   --spacing-sm: 12px;
   --spacing-md: 24px;
   --spacing-lg: 32px;
   --spacing-xl: 56px;
-  
-  /* Typography - Font Sizes */
-  --font-size-sm: 12px;
-  --font-size-base: 14px;
-  --font-size-md: 16px;
-  --font-size-lg: 18px;
-  
-  /* Typography - Line Heights */
-  --line-height-sm: 16px;
-  --line-height-md: 20px;
-  --line-height-lg: 24px;
-  
-  /* Typography - Letter Spacing */
-  --letter-spacing-normal: -0.25px;
-  --letter-spacing-tight: -0.5px;
-  
+
   /* Border Radius */
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-pill: 999px;
-  
+
   /* Shadows */
   --shadow-elevation-1: 0 4px 12px -2px rgba(24, 39, 75, 0.08), 0 0 4px 0 rgba(24, 39, 75, 0.02);
 
-} 
+}
