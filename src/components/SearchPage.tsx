@@ -1,16 +1,18 @@
 import { useState } from 'react';
 import styles from './SearchPage.module.css';
 import { SearchBar } from './SearchBar';
-import { Toggle, type ToggleViewType } from './Toggle';
+import { Toggle } from './Toggle';
 import { CardGrid } from './CardGrid';
+import { CreatorsTable } from './CreatorsTable';
 import { Button } from './Button';
 import ListIcon from './Icons/list-icon.svg?react';
 import GridIcon from './Icons/grid-icon.svg?react';
+import { useViewStore } from '../stores/useViewStore';
 
 export const SearchPage: React.FC = () => {
     const [searchTerm, setSearchTerm] = useState("");
-    const [toggleValue, setToggleValue] = useState<ToggleViewType>('grid');
     const [activeFilter, setActiveFilter] = useState<'cities' | 'age'>('cities');
+    const { toggleValue, setToggleValue } = useViewStore();
 
     const handleFilterClick = (filter: 'cities' | 'age') => {
         setActiveFilter(filter);
@@ -65,7 +67,7 @@ export const SearchPage: React.FC = () => {
                 </div>
             </div>
 
-            <CardGrid />
+            {toggleValue === 'grid' ? <CardGrid /> : <CreatorsTable />}
         </div>
     );
 };
