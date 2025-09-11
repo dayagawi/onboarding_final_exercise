@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 :root {
   --font-primary: "Brown LL", "Brown";
 
@@ -24,6 +26,7 @@
   --color-neutral: #2C2D30;
   --color-neutral-secondary: rgba(44, 45, 48, 0.08);
   --color-icon-bg: rgba(224, 224, 224, 0.1);
+  --color-text-primary: rgba(0, 0, 0, 0.87);
 
   --semantic-border-neutral: #E1E5E9;
   --semantic-bg-primary: #FCFCFD;
@@ -97,6 +100,19 @@
   --search-input-caret-color: #2B9BF0;
   --search-input-placeholder-color: #D0D1D3;
 
+  --semantic-fg-primary: #161719;
+  --semantic-fg-secondary: #7A7C81;
+  --text-primary: rgba(0, 0, 0, 0.87);
+  
+  /* Table Variables */
+  --table-header-height: 56px;
+  --table-row-height: 52px;
+  --table-cell-padding: 16px;
+  --table-cell-min-width: 308px;
+  --table-cell-height: 18px;
+  --table-gap: 8px;
+  --table-row-hover-bg: #f8f9fa;
+  
   /* Card Dimensions */
   --card-width: 342px;
   --card-height: 416px;

@@ -1,0 +1,73 @@
+.table-row {
+    display: flex;
+    height: var(--table-row-height);
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--semantic-bg-neutral-inverse);
+    background: var(--semantic-bg-secondary);
+    transition: background-color 0.2s ease;
+}
+
+.table-row:hover {
+    background-color: var(--table-row-hover-bg);
+}
+
+.data-cell {
+    display: flex;
+    height: var(--table-cell-height);
+    align-items: center;
+    flex: 1 0 0;
+    min-width: var(--table-cell-min-width);
+    color: var(--text-primary);
+}
+
+.name-cell {
+    display: flex;
+    align-items: center;
+    gap: var(--table-gap);
+    display: flex;
+    padding: 0 24px 0 4px;
+}
+
+.name-text {
+    color: var(--color-primary);
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 143%;
+    letter-spacing: 0.17px;
+    padding: var(--table-cell-padding);
+}
+
+.age-text {
+    color: var(--color-primary);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: var(--letter-spacing-normal);
+    padding: var(--table-cell-padding);
+}
+
+.email-text {
+    color: var(--color-primary);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-md);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: var(--letter-spacing-tight);
+    padding: var(--table-cell-padding);
+}
+
+.location-text {
+    color: var(--color-primary);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -0.25px;
+    padding: var(--table-cell-padding);
+}
