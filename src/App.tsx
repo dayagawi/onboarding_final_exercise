@@ -1,28 +1,23 @@
-import styles from './App.module.css'
-import { Avatar } from './components/Avatar'
-import { SearchPage } from './components/SearchPage'
-import LightricksLogo from './components/Icons/lightricks_logo.svg?react';
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { GlobalHeader } from './components/GlobalHeader';
+import { SearchPage } from './pages/SearchPage';
+import { CreatorPage } from './pages/CreatorPage';
+import styles from './App.module.css';
 
 function App() {
   return (
-    <div className={styles['app-container']}>
-      <div className={styles['home-page']}>
-        <header className={styles['header']}>
-          <div className={styles['logo-container']}>
-            <LightricksLogo className={styles['logo']} />
-          </div>
-          <Avatar
-            type="initials"
-            initials="TJ"
-            size="md"
-          />
-        </header>
+    <BrowserRouter>
+      <div className={styles['app-container']}>
+        <GlobalHeader />
         <main className={styles['main-content']}>
-          <SearchPage />
+          <Routes>
+            <Route path="/" element={<SearchPage />} />
+            <Route path="/creator/:id" element={<CreatorPage />} />
+          </Routes>
         </main>
       </div>
-    </div>
-  )
+    </BrowserRouter>
+  );
 }
-export default App
+
+export default App;

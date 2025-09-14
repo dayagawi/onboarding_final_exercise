@@ -3,20 +3,24 @@ import { Avatar } from './Avatar';
 import styles from './CreatorRow.module.css';
 
 interface CreatorRowProps {
+  id: number;
   name: string;
   email: string;
   age: number;
   location: string;
+  onRowClick?: () => void;
 }
 
 export const CreatorRow: React.FC<CreatorRowProps> = ({
+  id,
   name,
   email,
   age,
-  location
+  location,
+  onRowClick
 }) => {
   return (
-    <div className={styles['table-row']}>
+    <div className={styles['table-row']} onClick={onRowClick}>
       <div className={styles['data-cell']}>
         <div className={styles['name-cell']}>
           <Avatar type="icon" size="sm" />
