@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import styles from './SearchPage.module.css';
-import { SearchBar } from './SearchBar';
-import { Toggle } from './Toggle';
-import { CardGrid } from './CardGrid';
-import { CreatorsTable } from './CreatorsTable';
-import { Button } from './Button';
-import ListIcon from './Icons/list-icon.svg?react';
-import GridIcon from './Icons/grid-icon.svg?react';
+import { SearchBar } from '../components/SearchBar';
+import { Toggle } from '../components/Toggle';
+import { CardGrid } from '../components/CardGrid';
+import { CreatorsTable } from '../components/CreatorsTable';
+import { Button } from '../components/Button';
+import ListIcon from '../components/Icons/list-icon.svg?react';
+import GridIcon from '../components/Icons/grid-icon.svg?react';
 import { useViewStore } from '../stores/useViewStore';
 
 export const SearchPage: React.FC = () => {

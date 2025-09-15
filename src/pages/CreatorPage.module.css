@@ -1,0 +1,11 @@
+@import '../styles/variables.css';
+
+.creator-details {
+  display: flex;
+  align-items: center;
+}
+
+p {
+  text-align: center;
+  padding: 1px 300px;
+}

@@ -3,6 +3,7 @@ import styles from './CreatorCard.module.css';
 import { Avatar } from './Avatar';
 
 interface CreatorCardProps {
+  id: number;
   name: string;
   age: number;
   location: string;
@@ -11,6 +12,7 @@ interface CreatorCardProps {
 }
 
 export const CreatorCard: React.FC<CreatorCardProps> = ({
+  id,
   name,
   age,
   location,
