@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './SearchPage.module.css';
 import { SearchBar } from '../components/SearchBar';
 import { Toggle } from '../components/Toggle';
@@ -8,11 +8,17 @@ import { Button } from '../components/Button';
 import ListIcon from '../components/Icons/list-icon.svg?react';
 import GridIcon from '../components/Icons/grid-icon.svg?react';
 import { useViewStore } from '../stores/useViewStore';
+import { useCreatorStore } from '../stores/useCreatorStore';
 
 export const SearchPage: React.FC = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [activeFilter, setActiveFilter] = useState<'cities' | 'age'>('cities');
     const { toggleValue, setToggleValue } = useViewStore();
+    const { fetchCreators } = useCreatorStore();
+
+    useEffect(() => {
+        fetchCreators();
+    }, [fetchCreators]);
 
     const handleFilterClick = (filter: 'cities' | 'age') => {
         setActiveFilter(filter);
