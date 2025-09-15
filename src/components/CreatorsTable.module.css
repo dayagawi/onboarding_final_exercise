@@ -33,3 +33,13 @@
 .name-header-cell {
   padding: 7px 0 7px 4px;
 }
+
+.no-results-container {
+  text-align: center;
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.no-results-message {
+  margin: 0;
+}

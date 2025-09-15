@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import styles from './SearchPage.module.css';
 import { SearchBar } from '../components/SearchBar';
 import { Toggle } from '../components/Toggle';
@@ -11,14 +11,31 @@ import { useViewStore } from '../stores/useViewStore';
 import { useCreatorStore } from '../stores/useCreatorStore';
 
 export const SearchPage: React.FC = () => {
-    const [searchTerm, setSearchTerm] = useState("");
     const [activeFilter, setActiveFilter] = useState<'cities' | 'age'>('cities');
     const { toggleValue, setToggleValue } = useViewStore();
-    const { fetchCreators } = useCreatorStore();
+    const { fetchCreators, searchCreators, searchResults, creators, searchTerm, setSearchTerm } = useCreatorStore();
 
     useEffect(() => {
         fetchCreators();
     }, [fetchCreators]);
+
+    const debouncedSearch = useCallback(
+        (() => {
+            let timeoutId: ReturnType<typeof setTimeout>;
+            return (query: string) => {
+                clearTimeout(timeoutId);
+                timeoutId = setTimeout(() => {
+                    searchCreators(query);
+                }, 300);
+            };
+        })(),
+        [searchCreators]
+    );
+
+    const handleSearchChange = (value: string) => {
+        setSearchTerm(value);
+        debouncedSearch(value);
+    };
 
     const handleFilterClick = (filter: 'cities' | 'age') => {
         setActiveFilter(filter);
@@ -31,7 +48,7 @@ export const SearchPage: React.FC = () => {
                 <SearchBar
                     placeholder="Search users..."
                     value={searchTerm}
-                    onChange={setSearchTerm}
+                    onChange={handleSearchChange}
                 />
             </div>
 
@@ -57,7 +74,9 @@ export const SearchPage: React.FC = () => {
                 </div>
 
                 <div className={styles['results_count_n_view_toggle']}>
-                    <span className={styles['results-count']}>22,919 results</span>
+                    <span className={styles['results-count']}>
+                        {searchTerm ? `${searchResults.length} results` : `${creators.length} results`}
+                    </span>
                     <Toggle
                         leftOption={{
                             value: 'grid',
